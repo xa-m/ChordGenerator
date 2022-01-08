@@ -1,7 +1,29 @@
 #include <iostream>
-#include "ChordGeneretor.h"
+#include "ChordGeneretor.hpp"
 
-void ChordGeneretor::test()
+
+
+void ChordGeneretor::getNotes()
 {
-	std::cout << "hello from another c++ file" << std::endl;
+	auto note = notes.find(0);
+
+	//std::cout << notes[1] << std::endl;
+
+
+	std::cout << getNumberofNote("C2") << std::endl;
+}
+
+
+int ChordGeneretor::getNumberofNote(std::string note)
+{
+	for (int i = 0; i < 12; i++)
+	{
+		if (notes[i] == note)
+		{
+			return i;
+		}
+	}
+
+	// nothing find
+	return 0;
 }

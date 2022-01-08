@@ -23,7 +23,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ChordGeneretor.h">
+    <ClInclude Include="ChordGeneretor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

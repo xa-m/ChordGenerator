@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ChordGeneretor.hpp"
 #include <sstream>
+#include <string>
 
 
 
@@ -26,8 +27,27 @@ void ChordGeneretor::getCombinations()
 
 		if (findChordForNote(currentNoteNumber) != -1)
 		{
+			string currentChordNotesArray[3] = {};
 			int currentChordNumber = findChordForNote(currentNoteNumber);
-			cout << notesArray[i] << "\t" << getChordNoteNumbers(currentChordNumber) << endl;
+			string chordNumberString = getChordNoteNumbers(currentChordNumber);
+
+			int q = 0;
+			std::stringstream ssin(chordNumberString);
+			while (ssin.good() && q < 3) {
+				ssin >> currentChordNotesArray[q];
+				++q;
+			}
+			
+			int note1 = std::stoi(currentChordNotesArray[0]);
+			int note2 = std::stoi(currentChordNotesArray[1]);
+			int note3 = std::stoi(currentChordNotesArray[2]);
+			
+			string note1String = getNotebyNumber(note1);
+			string note2String = getNotebyNumber(note2);
+			string note3String = getNotebyNumber(note3);
+
+			cout << notesArray[i] << "\t" << note1String << " " << note2String << " " << note3String << endl;
+
 		}
 	}
 }

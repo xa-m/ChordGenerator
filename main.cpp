@@ -12,7 +12,7 @@ int main()
 
 	std::cout << "github: xa-m" << std::endl << std::endl;
 	std::cout << "Wellcome to chord generetor." << std::endl;
-	std::cout << "\tYou need to input your major notes with 1(one) space to input area,\n\tand you will get suitable chords for this notes." << std::endl;
+	std::cout << "\tYou need to input your major notes with 1(one) space between them in input area,\n\tand you will get suitable chords for this notes." << std::endl;
 	system("pause");
 
 	std::cout << "Notes: ";

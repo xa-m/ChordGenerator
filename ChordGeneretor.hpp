@@ -51,6 +51,7 @@ private:
 	};
 
 	int findChordForNote(int noteNumber);
+	
 
 	std::string getChordNoteNumbers(int chordNumber);
 

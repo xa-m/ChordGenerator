@@ -11,10 +11,7 @@ class ChordGeneretor
 
 private:
 	int getNumberofNote(std::string note);
-	std::string getNoteofNumber(int number);
-
-
-public:
+	std::string getNotebyNumber(int number);
 	std::map<int, std::string> notes =
 	{
 		{0, "C1"},
@@ -31,17 +28,37 @@ public:
 		{11, "G2"},
 	};
 
+	/*std::map<int, std::string> chords =
+	{
+		{0, "C1 E1 G1"},
+		{1, "D1 F1 A1"},
+		{2, "E1 G1 B1"},
+		{3, "F1 A1 C2"},
+		{4, "G1 B1 D2"},
+		{5, "A1 C2 E2"},
+		{6, "B1 D2 F2"},
+	};*/
 
 	std::map<int, std::string> chords =
 	{
-		{0, "C1 D1 A1"},
-		{1, "C2 G1 A2"},
-		{2, "B1 D1 F1"},
+		{0, "0 2 4"},
+		{1, "1 3 5"},
+		{2, "2 4 6"},
+		{3, "3 5 7"},
+		{4, "4 6 8"},
+		{5, "5 7 9"},
+		{6, "6 8 10"},
 	};
 
+	int findChordForNote(int noteNumber);
 
+	std::string getChordNoteNumbers(int chordNumber);
+
+public:
 	void getNotes();
-	std::string inputNotes;
+	void getCombinations();
 
+	std::string inputNotes;
+	std::string notesArray[32];
 };
 

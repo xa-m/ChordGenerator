@@ -1,15 +1,14 @@
 // ChordGenerator.cpp : This file contains the 'main' function. Program execution begins and ends there.
 #include <iostream>
 #include "ChordGeneretor.hpp"
-
 #include <string>
+#include <sstream>
 
 
 int main()
 {
 	ChordGeneretor cg;
 
-	cg.getNotes();
 
 	std::cout << "github: xa-m" << std::endl << std::endl;
 	std::cout << "Wellcome to chord generetor." << std::endl;
@@ -19,11 +18,10 @@ int main()
 	std::cout << "Notes: ";
 	std::getline(std::cin, cg.inputNotes);
 	
-	// all uppercase
-	for (int i = 0; i < cg.inputNotes.size(); i++) {
-		cg.inputNotes.at(i) = toupper(cg.inputNotes.at(i));
-	}
-	
-	cout << cg.inputNotes << std::endl;
+	// protocols
+	cg.getNotes();
+	cg.getCombinations();
 
+
+	//cout << cg.notesArray[10] << endl;
 }

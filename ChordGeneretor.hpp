@@ -30,7 +30,18 @@ public:
 		{10, "F2"},
 		{11, "G2"},
 	};
+
+
+	std::map<int, std::string> chords =
+	{
+		{0, "C1 D1 A1"},
+		{1, "C2 G1 A2"},
+		{2, "B1 D1 F1"},
+	};
+
+
 	void getNotes();
+	std::string inputNotes;
 
 };
 

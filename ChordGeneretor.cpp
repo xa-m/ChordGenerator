@@ -25,7 +25,7 @@ int ChordGeneretor::getNumberofNote(std::string note)
 	}
 
 	// nothing find
-	return 0;
+	return -1;
 }
 
 std::string ChordGeneretor::getNoteofNumber(int number)

@@ -1,3 +1,7 @@
-// main header file
+#pragma once
+class ChordGeneretor
+{
+public:
+	void test();
+};
 
-void test();

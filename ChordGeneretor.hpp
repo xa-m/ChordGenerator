@@ -11,6 +11,8 @@ class ChordGeneretor
 
 private:
 	int getNumberofNote(std::string note);
+	std::string getNoteofNumber(int number);
+
 
 public:
 	std::map<int, std::string> notes =
@@ -28,7 +30,6 @@ public:
 		{10, "F2"},
 		{11, "G2"},
 	};
-
 	void getNotes();
 
 };

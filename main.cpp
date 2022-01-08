@@ -6,8 +6,10 @@
 int main()
 {
 	ChordGeneretor cg;
-	
+
 	cg.getNotes();
+
+	std::cout << "Wellcome to chord generetor" << std::endl;
 
 
 }

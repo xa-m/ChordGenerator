@@ -10,7 +10,7 @@ void ChordGeneretor::getNotes()
 	//std::cout << notes[1] << std::endl;
 
 
-	std::cout << getNumberofNote("C2") << std::endl;
+	//std::cout << getNumberofNote("C2") << std::endl;
 }
 
 
@@ -26,4 +26,9 @@ int ChordGeneretor::getNumberofNote(std::string note)
 
 	// nothing find
 	return 0;
+}
+
+std::string ChordGeneretor::getNoteofNumber(int number)
+{
+	return notes[number];
 }

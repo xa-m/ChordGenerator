@@ -9,7 +9,6 @@ extern "C" {
 #include <string>
 #include <sstream>
 
-
 int main()
 {
 	ChordGeneretor cg;
@@ -26,12 +25,12 @@ int main()
 	std::cin >> hardnessInput;
 	std::cout << std::endl;
 	cg.setHardnessLevel(hardnessInput);
-	
+
+
 	// protocols
 	cg.getNotes();
 	cg.getCombinations();
 
 	system("pause");
-
-	//cout << cg.notesArray[10] << endl;
+	return NULL;
 }

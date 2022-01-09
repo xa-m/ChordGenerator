@@ -53,15 +53,23 @@ private:
 	int findChordForNote(int noteNumber);
 	
 
+	std::string notesArray[32];
 	std::string getChordNoteNumbers(int chordNumber);
 	int hardnessLevel = 1;
+
 public:
 	void getNotes();
 	void getCombinations();
 
 	std::string inputNotes;
-	std::string notesArray[32];
 	
-	void setHardnessLevel(int hardness);
+	void setHardnessLevel(int hardness)
+	{
+		if (!(hardness <= 2 && hardness >= 1))
+		{
+			return;
+		}
+		hardnessLevel = hardness;
+	}
 };
 

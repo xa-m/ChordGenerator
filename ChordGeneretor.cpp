@@ -52,15 +52,6 @@ void ChordGeneretor::getCombinations()
 	}
 }
 
-void ChordGeneretor::setHardnessLevel(int hardness)
-{
-	if (!(hardness <= 2 && hardness >= 1))
-	{
-		return;
-	}
-	hardnessLevel = hardness;
-}
-
 std::string ChordGeneretor::getChordNoteNumbers(int chordNumber)
 {
 	return chords[chordNumber];

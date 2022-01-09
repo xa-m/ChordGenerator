@@ -8,7 +8,7 @@
 int main()
 {
 	ChordGeneretor cg;
-
+	int hardnessInput;
 
 	std::cout << "github: xa-m" << std::endl << std::endl;
 	std::cout << "Wellcome to chord generetor." << std::endl;
@@ -18,10 +18,17 @@ int main()
 	std::cout << "Notes: ";
 	std::getline(std::cin, cg.inputNotes);
 	
+
+	std::cout << "\nHardness level(1 or 2): ";
+	std::cin >> hardnessInput;
+	std::cout << std::endl;
+	cg.setHardnessLevel(hardnessInput);
+	
 	// protocols
 	cg.getNotes();
 	cg.getCombinations();
 
+	system("pause");
 
 	//cout << cg.notesArray[10] << endl;
 }

@@ -54,12 +54,14 @@ private:
 	
 
 	std::string getChordNoteNumbers(int chordNumber);
-
+	int hardnessLevel = 1;
 public:
 	void getNotes();
 	void getCombinations();
 
 	std::string inputNotes;
 	std::string notesArray[32];
+	
+	void setHardnessLevel(int hardness);
 };
 

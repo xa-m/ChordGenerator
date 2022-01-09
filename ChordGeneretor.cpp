@@ -37,11 +37,11 @@ void ChordGeneretor::getCombinations()
 				ssin >> currentChordNotesArray[q];
 				++q;
 			}
-			
+
 			int note1 = std::stoi(currentChordNotesArray[0]);
 			int note2 = std::stoi(currentChordNotesArray[1]);
 			int note3 = std::stoi(currentChordNotesArray[2]);
-			
+
 			string note1String = getNotebyNumber(note1);
 			string note2String = getNotebyNumber(note2);
 			string note3String = getNotebyNumber(note3);
@@ -50,6 +50,15 @@ void ChordGeneretor::getCombinations()
 
 		}
 	}
+}
+
+void ChordGeneretor::setHardnessLevel(int hardness)
+{
+	if (!(hardness <= 2 && hardness >= 1))
+	{
+		return;
+	}
+	hardnessLevel = hardness;
 }
 
 std::string ChordGeneretor::getChordNoteNumbers(int chordNumber)
@@ -77,24 +86,54 @@ int ChordGeneretor::getNumberofNote(std::string note)
 
 int ChordGeneretor::findChordForNote(int noteNumber)
 {
-	for (int i = 0; i < 7; i++)
+	if (hardnessLevel == 1)
 	{
-		auto chord = chords[i];
-		string chordNoteArray[3];
-
-
-		int count = 0;
-		std::stringstream ssin(chord);
-		while (ssin.good() && count < 4) {
-			ssin >> chordNoteArray[count];
-			++count;
-		}
-		for (int q = 0; q < 4; q++)
+		for (int i = 0; i < 7; i++)
 		{
-			if (chordNoteArray[q] == std::to_string(noteNumber))
-			{
-				return i;
+			auto chord = chords[i];
+			string chordNoteArray[3];
+
+
+			int count = 0;
+			std::stringstream ssin(chord);
+			while (ssin.good() && count < 4) {
+				ssin >> chordNoteArray[count];
+				++count;
 			}
+			for (int q = 0; q < 4; q++)
+			{
+				// 0 1 2 3
+				if (chordNoteArray[q] == std::to_string(noteNumber))
+				{
+					return i;
+				}
+			}
+
+		}
+	}
+	else if (hardnessLevel == 2)
+	{
+		int i = 6;
+		while (i >= 0)
+		{
+			auto chord = chords[i];
+			string chordNoteArray[3];
+
+			int count = 0;
+			std::stringstream ssin(chord);
+			while (ssin.good() && count < 4) {
+				ssin >> chordNoteArray[count];
+				++count;
+			}
+			for (int q = 0; q < 4; q++)
+			{
+				// 0 1 2 3
+				if (chordNoteArray[q] == std::to_string(noteNumber))
+				{
+					return i;
+				}
+			}
+			i -= 1;
 		}
 	}
 

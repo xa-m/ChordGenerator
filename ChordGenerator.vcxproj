@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="ChordGeneretor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Messages.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChordGeneretor.hpp" />
+    <ClInclude Include="Messages.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

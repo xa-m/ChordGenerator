@@ -1,4 +1,9 @@
 // ChordGenerator.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+extern "C" {
+#include "Messages.h"
+}
+
 #include <iostream>
 #include "ChordGeneretor.hpp"
 #include <string>
@@ -9,10 +14,8 @@ int main()
 {
 	ChordGeneretor cg;
 	int hardnessInput;
-
-	std::cout << "github: xa-m" << std::endl << std::endl;
-	std::cout << "Wellcome to chord generetor." << std::endl;
-	std::cout << "\tYou need to input your major notes with 1(one) space between them in input area,\n\tand you will get suitable chords for this notes." << std::endl;
+	wellcomeMessage();
+	
 	system("pause");
 
 	std::cout << "Notes: ";
